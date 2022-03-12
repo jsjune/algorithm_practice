@@ -1,4 +1,10 @@
 package algorithmn_1week;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+//import java.util.Collections;
+
 ////////////////////////////////////////////////////////////////////
 public class Test14 {
     public int[] solution(int[] arr, int divisor) {
@@ -13,17 +19,26 @@ public class Test14 {
 
     public static void main(String[] args) {
         Test14 arr = new Test14();
-        int[] a = {3, 9, 7, 8};
+        int[] a = {5,9,7,10};
         int b = 5;
-//        System.out.println(arr.solution(a,b));
-        int cnt = 0;
-        for(int i=0; i<a.length;i++){
-            if(a[i]%b==0){
-                cnt += 1;
+        ArrayList<Integer> ar = new ArrayList<>();
+
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % b == 0) {
+                ar.add(a[i]);
             }
         }
-        System.out.println(cnt);
+        if (ar.isEmpty()) {
+            ar.add(-1);
+        }
 
+        ar.sort(Comparator.naturalOrder());
+        System.out.println(ar);
+//        int[] result = {};
+//        for (int i = 0; i < ar.size(); i++) {
+//            result[i]=ar.get(i);
+//        }
+//        System.out.println(result);
     }
 
 }

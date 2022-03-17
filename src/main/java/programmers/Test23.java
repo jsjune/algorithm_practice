@@ -21,12 +21,18 @@ public class Test23 {
 
     public static void main(String[] args) {
         int n = 12345;
-        String s = String.valueOf(n);
-        StringBuilder sb = new StringBuilder(s);
-        sb = sb.reverse();
-        System.out.println(sb);
-        String[] ss = sb.toString().split("");
-        System.out.println(Arrays.toString(ss));
+//        String s = String.valueOf(n);
+//        StringBuilder sb = new StringBuilder(s);
+//        sb = sb.reverse();
+//        System.out.println(sb);
+//        String[] ss = sb.toString().split("");
+//        System.out.println(Arrays.toString(ss));
+        String[] str = String.valueOf(n).split("");
+        int[] answer = new int[str.length];
+        for (int i = 0; i < answer.length; i++) {
+            answer[i] = Integer.valueOf(str[answer.length - i-1]);
+        }
+        System.out.println(Arrays.toString(answer));
     }
 }
 

@@ -5,21 +5,17 @@ https://programmers.co.kr/learn/courses/30/lessons/42576
 완주하지 못한 선수
  */
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 public class Hash1 {
     public static void main(String[] args) {
         String[] participant = {"leo", "kiki", "eden", "kiki"};
         String[] completion = {"eden", "kiki"};
         Hash1 sol = new Hash1();
-        System.out.println(sol.Solution(participant, completion));
+        System.out.println(sol.solution(participant, completion));
     }
 
-    public String Solution(String[] participants, String[] completions) {
+    public String solution(String[] participants, String[] completions) {
         String answer = "";
         HashMap<String, Integer> map = new HashMap<>();
         for (String participant : participants) {

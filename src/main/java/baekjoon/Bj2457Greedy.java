@@ -3,6 +3,7 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Bj2457Greedy {
@@ -39,9 +40,10 @@ public class Bj2457Greedy {
             count++;
         }
         System.out.println(count);
+        System.out.println(Arrays.deepToString(array));
     }
 }
-//        System.out.println(Arrays.deepToString(array));
+
 /*
 10
 215 323
@@ -55,7 +57,8 @@ public class Bj2457Greedy {
 1005 1231
 714 901
 
-===301===
+301 ~ 1201
+===start : 301===
 215 323
 228 425 -> 425
 ===425===

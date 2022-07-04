@@ -18,23 +18,24 @@ public class Bj1181Sort {
             strArr[i] = br.readLine();
         }
 
-        Arrays.sort(strArr, ((o1, o2) -> o1.length() == o2.length() ? o1.compareTo(o2) : o1.length() - o2.length()));
-//        Arrays.sort(strArr, new Comparator<String>() {
-//            public int compare(String s1, String s2) {
-//                // 단어 길이가 같을 경우
-//                if (s1.length() == s2.length()) {
-//                    return s1.compareTo(s2);
-//                }
-//                // 그 외의 경우
-//                else {
-//                    System.out.println("s1 = " + s1);
-//                    System.out.println("s2 = " + s2);
-//                    System.out.println(Arrays.toString(strArr));
-//                    System.out.println(s1.length() - s2.length());
-//                    return s1.length() - s2.length();
-//                }
-//            }
-//        });
+//        Arrays.sort(strArr, ((o1, o2) -> o1.length() == o2.length() ? o1.compareTo(o2) : o1.length() - o2.length()));
+        Arrays.sort(strArr, new Comparator<String>() {
+            public int compare(String s1, String s2) {
+                System.out.println(Arrays.toString(strArr));
+
+                // 단어 길이가 같을 경우
+                if (s1.length() == s2.length()) {
+                    return s1.compareTo(s2);
+                }
+                // 그 외의 경우
+                else {
+                    System.out.println("s1 = " + s1);
+                    System.out.println("s2 = " + s2);
+                    System.out.println(s1.length() - s2.length());
+                    return s1.length() - s2.length();
+                }
+            }
+        });
 
         System.out.println(strArr[0]);
 

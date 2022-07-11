@@ -1,5 +1,7 @@
 package algorithm;
 
+import baekjoon.Bj10816BinarySearch;
+
 import java.util.Arrays;
 
 public class Merge_Sort {
